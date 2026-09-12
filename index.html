@@ -1,0 +1,1818 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portofolio Sintia Attahira</title>
+
+
+<style>
+
+/* =========================
+   DASAR
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Segoe UI", sans-serif;
+
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: #fff5fa;
+
+    color: #633b50;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 18px 8%;
+
+    background: rgba(255, 240, 247, 0.95);
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 3px 20px
+        rgba(190, 80, 140, 0.12);
+}
+
+
+.logo {
+
+    color: #b83f7d;
+
+    font-size: 23px;
+
+    font-weight: bold;
+}
+
+
+nav a {
+
+    color: #633b50;
+
+    text-decoration: none;
+
+    margin-left: 22px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+nav a:hover {
+
+    color: #c74488;
+
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+section {
+
+    padding: 90px 8%;
+}
+
+
+.judul {
+
+    text-align: center;
+
+    color: #ad3c78;
+
+    font-size: 36px;
+
+    margin-bottom: 50px;
+}
+
+
+.judul::after {
+
+    content: "";
+
+    display: block;
+
+    width: 65px;
+
+    height: 4px;
+
+    margin: 10px auto;
+
+    background: #e88bb7;
+
+    border-radius: 20px;
+}
+
+
+/* =========================
+   HOME
+========================= */
+
+#home {
+
+    min-height: 90vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 60px;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            #ffddec,
+            transparent 45%
+        );
+
+    animation: muncul 1s ease;
+}
+
+
+.home-text {
+
+    max-width: 600px;
+}
+
+
+.home-text p:first-child {
+
+    color: #c34a88;
+
+    font-size: 20px;
+}
+
+
+.home-text h1 {
+
+    color: #a83270;
+
+    font-size: 55px;
+
+    margin: 10px 0;
+}
+
+
+.home-text h2 {
+
+    color: #70485d;
+
+    margin-bottom: 10px;
+}
+
+
+.home-text p {
+
+    margin: 6px 0;
+}
+
+
+/* FOTO HOME */
+
+.foto {
+
+    width: 300px;
+
+    height: 300px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 8px solid #f4b9d5;
+
+    background: #ffe2ee;
+
+    box-shadow:
+        0 15px 40px
+        rgba(190,75,135,.20);
+
+    overflow: hidden;
+
+    animation:
+        mengambang
+        3s
+        ease-in-out
+        infinite;
+}
+
+
+.foto img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* TOMBOL */
+
+.tombol {
+
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 13px 28px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    color: white;
+
+    background: #d45b98;
+
+    box-shadow:
+        0 8px 20px
+        rgba(190,70,130,.25);
+
+    transition: .3s;
+}
+
+
+.tombol:hover {
+
+    background: #b83f7d;
+
+    transform:
+        translateY(-4px);
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-container {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 60px;
+}
+
+
+.about-foto {
+
+    width: 260px;
+
+    height: 300px;
+
+    flex-shrink: 0;
+
+    border-radius: 25px;
+
+    background: #ffe0ed;
+
+    box-shadow:
+        0 10px 30px
+        rgba(190,75,135,.12);
+
+    overflow: hidden;
+}
+
+
+.about-foto img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.about-text {
+
+    line-height: 1.8;
+}
+
+
+.data {
+
+    margin-top: 20px;
+
+    padding: 20px;
+
+    background: #fffafb;
+
+    border: 1px solid #f2c7da;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(190,75,135,.08);
+}
+
+
+.data p {
+
+    margin: 8px 0;
+}
+
+
+/* =========================
+   EDUCATION
+========================= */
+
+.education {
+
+    max-width: 850px;
+
+    margin: auto;
+}
+
+
+.education-card {
+
+    padding: 30px;
+
+    margin-bottom: 25px;
+
+    background: #fffafb;
+
+    border: 1px solid #f1c5d8;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(190,75,135,.10);
+
+    transition: .4s;
+}
+
+
+.education-card:hover {
+
+    transform:
+        translateY(-7px);
+
+    background: #ffe8f1;
+}
+
+
+.education-icon {
+
+    width: 60px;
+
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 15px;
+
+    border-radius: 50%;
+
+    background: #e88bb7;
+
+    color: white;
+
+    font-size: 25px;
+}
+
+
+.education-card h3 {
+
+    color: #a83270;
+
+    margin-bottom: 8px;
+
+    font-size: 22px;
+}
+
+
+.education-card p {
+
+    margin: 5px 0;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+
+.skill {
+
+    padding: 30px 15px;
+
+    text-align: center;
+
+    background: #fffafb;
+
+    border: 1px solid #f1c5d8;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(190,75,135,.10);
+
+    transition: .4s;
+}
+
+
+.skill:hover {
+
+    transform:
+        translateY(-10px);
+
+    background: #ffe8f1;
+}
+
+
+.skill-icon {
+
+    width: 75px;
+
+    height: 75px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: #e88bb7;
+
+    color: white;
+
+    font-weight: bold;
+}
+
+
+.skill h3 {
+
+    color: #8f3b67;
+
+    margin-top: 15px;
+}
+
+
+.skill p {
+
+    margin-top: 5px;
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 30px;
+
+    max-width: 1000px;
+
+    margin: auto;
+}
+
+
+.project {
+
+    padding: 25px;
+
+    background: #fffafb;
+
+    border: 1px solid #f1c5d8;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(190,75,135,.10);
+
+    transition: .4s;
+}
+
+
+.project:hover {
+
+    transform:
+        translateY(-8px);
+
+    background: #ffe8f1;
+}
+
+
+.project-img {
+
+    height: 180px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd6e8,
+            #ffeef5
+        );
+
+    color: #b83f7d;
+
+    font-size: 45px;
+
+    font-weight: bold;
+}
+
+
+.project h3 {
+
+    color: #a83270;
+
+    font-size: 22px;
+
+    margin-bottom: 10px;
+}
+
+
+.project p {
+
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+}
+
+
+.project-button {
+
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    color: white;
+
+    background: #d45b98;
+
+    transition: .3s;
+}
+
+
+.project-button:hover {
+
+    background: #b83f7d;
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* =========================
+   CERTIFICATES
+========================= */
+
+.certificates {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 30px;
+
+    max-width: 1000px;
+
+    margin: auto;
+}
+
+
+.certificate-card {
+
+    padding: 20px;
+
+    text-align: center;
+
+    background: #fffafb;
+
+    border: 1px solid #f1c5d8;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(190,75,135,.10);
+
+    transition: .4s;
+}
+
+
+.certificate-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    background: #ffe8f1;
+}
+
+
+.certificate-image {
+
+    width: 100%;
+
+    height: 260px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #ffe8f1;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    margin-bottom: 18px;
+}
+
+
+.certificate-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+.certificate-card h3 {
+
+    color: #a83270;
+
+    margin-bottom: 8px;
+}
+
+
+.certificate-card p {
+
+    margin: 6px 0;
+}
+
+
+.lihat-sertifikat {
+
+    display: inline-block;
+
+    margin-top: 12px;
+
+    padding: 10px 20px;
+
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    color: white;
+
+    background: #d45b98;
+
+    transition: .3s;
+}
+
+
+.lihat-sertifikat:hover {
+
+    background: #b83f7d;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-container {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 50px;
+}
+
+
+.contact-info,
+form {
+
+    padding: 30px;
+
+    background: #fffafb;
+
+    border: 1px solid #f1c5d8;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(190,75,135,.10);
+}
+
+
+.contact-info h3,
+form h3 {
+
+    color: #a83270;
+
+    margin-bottom: 20px;
+}
+
+
+.contact-info p {
+
+    margin: 20px 0;
+}
+
+
+.contact-info a {
+
+    color: #c74488;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+
+.contact-info a:hover {
+
+    color: #a83270;
+
+    text-decoration: underline;
+}
+
+
+form input,
+form textarea {
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid #e9aec9;
+
+    border-radius: 10px;
+
+    background: #fff7fb;
+
+    color: #633b50;
+
+    outline: none;
+}
+
+
+form input:focus,
+form textarea:focus {
+
+    border-color: #d45b98;
+
+    box-shadow:
+        0 0 0 3px
+        #ffe1ee;
+}
+
+
+form textarea {
+
+    height: 130px;
+
+    resize: none;
+}
+
+
+form button {
+
+    padding: 13px 25px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #d45b98;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+
+form button:hover {
+
+    background: #b83f7d;
+
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    padding: 25px;
+
+    text-align: center;
+
+    background: #e88bb7;
+
+    color: white;
+}
+
+
+/* =========================
+   ANIMASI
+========================= */
+
+@keyframes muncul {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(25px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+@keyframes mengambang {
+
+    0%, 100% {
+
+        transform:
+            translateY(0);
+    }
+
+    50% {
+
+        transform:
+            translateY(-12px);
+    }
+
+}
+
+
+/* =========================
+   HP
+========================= */
+
+@media (max-width: 768px) {
+
+    header {
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    nav {
+
+        text-align: center;
+    }
+
+
+    nav a {
+
+        margin: 0 5px;
+
+        font-size: 12px;
+    }
+
+
+    #home {
+
+        flex-direction:
+            column-reverse;
+
+        text-align: center;
+
+        padding-top: 60px;
+    }
+
+
+    .home-text h1 {
+
+        font-size: 40px;
+    }
+
+
+    .foto {
+
+        width: 230px;
+
+        height: 230px;
+    }
+
+
+    .about-container {
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    .about-foto {
+
+        width: 260px;
+
+        height: 300px;
+    }
+
+
+    .skills {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .projects {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .certificates {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .contact-container {
+
+        grid-template-columns:
+            1fr;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header>
+
+    <div class="logo">
+        Sintia Attahira ♡
+    </div>
+
+
+    <nav>
+
+        <a href="#home">
+            Home
+        </a>
+
+        <a href="#about">
+            About
+        </a>
+
+        <a href="#education">
+            Education
+        </a>
+
+        <a href="#skills">
+            Skills
+        </a>
+
+        <a href="#projects">
+            Projects
+        </a>
+
+        <a href="#certificates">
+            Certificates
+        </a>
+
+        <a href="#contact">
+            Contact
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================
+     HOME
+========================= -->
+
+<section id="home">
+
+    <div class="home-text">
+
+        <p>
+            Halo, saya 👋
+        </p>
+
+
+        <h1>
+            Sintia Attahira
+        </h1>
+
+
+        <h2>
+            Mahasiswa Teknik Informatika
+        </h2>
+
+
+        <p>
+            Universitas Jabal Ghafur
+        </p>
+
+
+        <p>
+            Umur: 20 Tahun
+        </p>
+
+
+        <a
+            href="#about"
+            class="tombol"
+        >
+            Lihat Portfolio →
+        </a>
+
+    </div>
+
+
+
+    <div class="foto">
+
+        <img
+            src="./sintia.jpeg"
+            alt="Foto Sintia"
+        >
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+    <h2 class="judul">
+        About Me
+    </h2>
+
+
+    <div class="about-container">
+
+
+        <div class="about-foto">
+
+            <img
+                src="./sintia.jpeg"
+                alt="Foto Sintia"
+            >
+
+        </div>
+
+
+        <div class="about-text">
+
+            <p>
+
+                Saya adalah mahasiswa yang
+                memiliki ketertarikan di bidang
+                teknologi, desain, dan
+                pengembangan website.
+
+            </p>
+
+
+            <div class="data">
+
+                <p>
+                    <b>Nama:</b>
+                    Sintia Attahira
+                </p>
+
+
+                <p>
+                    <b>Umur:</b>
+                    20 Tahun
+                </p>
+
+
+                <p>
+                    <b>Universitas:</b>
+                    Universitas Jabal Ghafur
+                </p>
+
+
+                <p>
+                    <b>Jurusan:</b>
+                    Teknik Informatika
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     EDUCATION
+========================= -->
+
+<section id="education">
+
+    <h2 class="judul">
+        Education
+    </h2>
+
+
+    <div class="education">
+
+
+        <div class="education-card">
+
+            <div class="education-icon">
+                🏫
+            </div>
+
+
+            <h3>
+                SDN Dayah Tanoh
+            </h3>
+
+
+            <p>
+                <b>Tahun Lulus:</b>
+                2018
+            </p>
+
+
+            <p>
+                Pendidikan Sekolah Dasar
+            </p>
+
+        </div>
+
+
+
+        <div class="education-card">
+
+            <div class="education-icon">
+                🎓
+            </div>
+
+
+            <h3>
+                MTsN Nurul Hikmah Al Aziziyah
+            </h3>
+
+
+            <p>
+                <b>Tahun Lulus:</b>
+                2021
+            </p>
+
+
+            <p>
+                Pendidikan Madrasah Tsanawiyah
+            </p>
+
+        </div>
+
+
+
+        <div class="education-card">
+
+            <div class="education-icon">
+                🎓
+            </div>
+
+
+            <h3>
+                MAS Nurul Hikmah Al Aziziyah
+            </h3>
+
+
+            <p>
+                <b>Tahun Lulus:</b>
+                2024
+            </p>
+
+
+            <p>
+                Pendidikan Madrasah Aliyah
+            </p>
+
+        </div>
+
+
+
+        <div class="education-card">
+
+            <div class="education-icon">
+                🎓
+            </div>
+
+
+            <h3>
+                Universitas Jabal Ghafur
+            </h3>
+
+
+            <p>
+                <b>Jurusan:</b>
+                Teknik Informatika
+            </p>
+
+
+            <p>
+                <b>Status:</b>
+                Mahasiswa
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SKILLS
+========================= -->
+
+<section id="skills">
+
+    <h2 class="judul">
+        My Skills
+    </h2>
+
+
+    <div class="skills">
+
+
+        <div class="skill">
+
+            <div class="skill-icon">
+                HTML
+            </div>
+
+            <h3>
+                HTML
+            </h3>
+
+            <p>
+                Struktur website
+            </p>
+
+        </div>
+
+
+
+        <div class="skill">
+
+            <div class="skill-icon">
+                CSS
+            </div>
+
+            <h3>
+                CSS
+            </h3>
+
+            <p>
+                Desain tampilan
+            </p>
+
+        </div>
+
+
+
+        <div class="skill">
+
+            <div class="skill-icon">
+                PY
+            </div>
+
+            <h3>
+                Python
+            </h3>
+
+            <p>
+                Pemrograman
+            </p>
+
+        </div>
+
+
+
+        <div class="skill">
+
+            <div class="skill-icon">
+                PHP
+            </div>
+
+            <h3>
+                PHP
+            </h3>
+
+            <p>
+                Pemrograman web
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PROJECTS
+========================= -->
+
+<section id="projects">
+
+    <h2 class="judul">
+        My Projects
+    </h2>
+
+
+    <div class="projects">
+
+
+        <!-- PROJECT 1 -->
+
+        <div class="project">
+
+            <div class="project-img">
+                💻
+            </div>
+
+
+            <h3>
+                Website Portfolio
+            </h3>
+
+
+            <p>
+
+                Website portfolio pribadi
+                yang dibuat menggunakan
+                HTML dan CSS untuk
+                menampilkan profil,
+                pendidikan, skill,
+                project, dan sertifikat.
+
+            </p>
+
+
+            <a
+                href="project1.html"
+                class="project-button"
+            >
+                Lihat Project →
+            </a>
+
+        </div>
+
+
+
+        <!-- PROJECT 2 -->
+
+        <div class="project">
+
+            <div class="project-img">
+                🗄️
+            </div>
+
+
+            <h3>
+                Database Siswa
+            </h3>
+
+
+            <p>
+
+                Perancangan database
+                sederhana untuk pengelolaan
+                data siswa menggunakan
+                konsep database dan tabel.
+
+            </p>
+
+
+            <a
+                href="project2.html"
+                class="project-button"
+            >
+                Lihat Project →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CERTIFICATES
+========================= -->
+
+<section id="certificates">
+
+    <h2 class="judul">
+        My Certificates
+    </h2>
+
+
+    <div class="certificates">
+
+
+        <!-- SERTIFIKAT 1 -->
+
+        <div class="certificate-card">
+
+            <div class="certificate-image">
+
+                <img
+                    src="./sertifikat.jpeg"
+                    alt="Sertifikat Penghargaan"
+                >
+
+            </div>
+
+
+            <h3>
+                Sertifikat Penghargaan
+            </h3>
+
+
+            <p>
+                Sharing Time
+                dan kegiatan kepemudaan
+            </p>
+
+
+            <p>
+                <b>Tahun:</b>
+                2025
+            </p>
+
+
+            <a
+                href="./sertifikat.jpeg"
+                target="_blank"
+                class="lihat-sertifikat"
+            >
+                Lihat Sertifikat →
+            </a>
+
+        </div>
+
+
+
+        <!-- SERTIFIKAT 2 -->
+
+        <div class="certificate-card">
+
+            <div class="certificate-image">
+
+                <img
+                    src="./sertifikat2.jpeg"
+                    alt="Sertifikat Kuliah Umum"
+                >
+
+            </div>
+
+
+            <h3>
+                Kuliah Umum Kecerdasan Buatan
+            </h3>
+
+
+            <p>
+                Fakultas Teknik
+                Universitas Jabal Ghafur
+            </p>
+
+
+            <p>
+                <b>Tahun:</b>
+                2024
+            </p>
+
+
+            <a
+                href="./sertifikat2.jpeg"
+                target="_blank"
+                class="lihat-sertifikat"
+            >
+                Lihat Sertifikat →
+            </a>
+
+        </div>
+
+
+
+        <!-- SERTIFIKAT 3 -->
+
+        <div class="certificate-card">
+
+            <div class="certificate-image">
+
+                <img
+                    src="./sertifikat3.jpeg"
+                    alt="Sertifikat Dicoding"
+                >
+
+            </div>
+
+
+            <h3>
+                Belajar Dasar
+                Pemrograman JavaScript
+            </h3>
+
+
+            <p>
+                Dicoding Indonesia
+            </p>
+
+
+            <p>
+                <b>Tahun:</b>
+                2025
+            </p>
+
+
+            <a
+                href="./sertifikat3.jpeg"
+                target="_blank"
+                class="lihat-sertifikat"
+            >
+                Lihat Sertifikat →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact">
+
+    <h2 class="judul">
+        Contact Me
+    </h2>
+
+
+    <div class="contact-container">
+
+
+        <div class="contact-info">
+
+            <h3>
+                Mari Terhubung 💕
+            </h3>
+
+
+            <p>
+
+                ✉️ <b>Email</b><br>
+
+                <a
+                    href="mailto:sintiaattahira@gmail.com"
+                >
+                    sintiaattahira@gmail.com
+                </a>
+
+            </p>
+
+
+            <p>
+
+                📷 <b>Instagram</b><br>
+
+                <a
+                    href="https://instagram.com/sintiaattahira"
+                    target="_blank"
+                >
+                    @sintiaattahira
+                </a>
+
+            </p>
+
+
+            <p>
+
+                🎓 <b>Universitas</b><br>
+
+                Universitas Jabal Ghafur
+
+            </p>
+
+        </div>
+
+
+
+        <form
+            onsubmit="kirimPesan(event)"
+        >
+
+            <h3>
+                Kirim Pesan 💌
+            </h3>
+
+
+            <input
+                type="text"
+                placeholder="Nama"
+                required
+            >
+
+
+            <input
+                type="email"
+                placeholder="Email"
+                required
+            >
+
+
+            <textarea
+                placeholder="Tulis pesan..."
+                required
+            ></textarea>
+
+
+            <button
+                type="submit"
+            >
+                Kirim Pesan →
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    © 2026 Sintia Attahira —
+    Portfolio Website ♡
+
+</footer>
+
+
+
+<script>
+
+function kirimPesan(event) {
+
+    event.preventDefault();
+
+    alert(
+        "Terima kasih! Pesan kamu berhasil dikirim 💕"
+    );
+
+}
+
+</script>
+
+
+</body>
+</html>
